@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+	    tailwind.config = {
+	      darkMode: 'class',
+	    }
+	</script>
+</head>
+<body class="min-h-screen flex items-center justify-center dark:bg-[#383937] dark:text-white">
+	<div class="absolute top-2 right-9 mb-3 flex justify-center items-center">
+		<button id="toggleDarkMode" class="bg-[#61d017] dark:bg-[#0e130b] w-fit p-2" type="button">Change Theme</button>
+	</div>
+	<form id="calc" class="bg-[#a1f966] dark:bg-[#5f675a] w-[60%] p-4" action="#">
+		<!-- Title -->
+		<h1 class="font-bold text-center mb-3">Selamat Datang <br> di Web Kalkulator yang Tidak Terlalu Sederhana</h1>
+
+		<!-- Field Operation -->
+		<div class="mb-3">
+			<label for="field">Field Operation</label><br>
+			<input type="text" id="field" name="field" readonly class="bg-white dark:bg-[#363934] w-full">
+		</div>
+
+		<!-- Hasil -->
+		<div class="mb-3">
+			<label for="result">Hasil</label><br>
+			<input type="text" readonly id="result" name="result" class="bg-white dark:bg-[#363934] w-full">
+		</div>
+
+		<div class="grid grid-cols-3 gap-4">
+			<!-- Button angka 1 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="1">1</button>
+			</div>
+
+			<!-- Button angka 2 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="2">2</button>
+			</div>
+
+			<!-- Button angka 3 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="3">3</button>
+			</div>
+
+			<!-- Button angka 4 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="4">4</button>
+			</div>
+
+			<!-- Button angka 5 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="5">5</button>
+			</div>
+
+			<!-- Button angka 6 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="6">6</button>
+			</div>
+
+			<!-- Button angka 7 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="7">7</button>
+			</div>
+
+			<!-- Button angka 8 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="8">8</button>
+			</div>
+
+			<!-- Button angka 9 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="9">9</button>
+			</div>
+
+			<!-- Button angka 0 -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="0">0</button>
+			</div>
+
+			<!-- Button tambah -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="+">+</button>
+			</div>
+
+			<!-- Button kurang -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="-">-</button>
+			</div>
+
+			<!-- Button kali -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="*">*</button>
+			</div>
+
+			<!-- Button bagi -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="button" value="/">/</button>
+			</div>
+
+			<!-- Button sama dengan -->
+			<div class="mb-3 flex justify-center items-center">
+				<button class="bg-white dark:bg-[#363934] w-[40%]" name="operator" type="submit" value="=">=</button>
+			</div>
+		</div>
+	</form>
+	<!-- Script JS -->
+	<script src="toggle-dark-mode.js"></script>
+	<script src="Operation.js"></script>
+</body>
+</html>
